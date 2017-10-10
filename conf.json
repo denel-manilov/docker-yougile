@@ -1,0 +1,35 @@
+{
+  /**
+   * Port that is used by YouGile backend.
+   * It is recommended to use nginx
+   * in front of YouGile with https turned on.
+   * If YouGile is the only app served on the server,
+   * you can run "yougile setup:nginx" to install default nginx
+   * configurations for YouGile
+   * (this command rewrites existent nginx configurations).
+   */
+  "port": 8001,
+
+  /**
+   * URL that is used to access your YouGile server.
+   */
+  "mainPageUrl": "https://yougile.example.com",
+
+  "emailFrom": "\"YouGile\" <myemail@example.com>",
+
+  /**
+   * SMTP settings for sending emails.
+   */
+  "smtp": {
+    "host": "smtp.example.com",
+    "secure": true,
+    "port": 465,
+    "pool": true,
+    "rateLimit": 5,
+    "maxConnections": 20,
+    "auth": {
+      "user": "myemail@example.com",
+      "pass": "PASSWORD"
+    }
+  }
+}
